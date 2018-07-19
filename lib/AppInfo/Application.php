@@ -28,7 +28,7 @@ use OCA\Files_External\Lib\Config\IBackendProvider;
 class Application extends App implements IBackendProvider {
 	public function __construct(array $urlParams = array()) {
 		parent::__construct('files_external_sia', $urlParams);
-	}
+    }
 	public function register() {
 		$server = $this->getContainer()->getServer();
 		$backendService = $server->query('OCA\\Files_External\\Service\\BackendService');
