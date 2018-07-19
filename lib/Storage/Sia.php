@@ -104,7 +104,7 @@ class Sia extends \OC\Files\Storage\Common {
 	}
 
 	public function mkdir($path) {
-		$tmpFile = \OCP\Files::tmpFile();
+		$tmpFile = \OC::$server->getTempManager()->getTemporaryFile();
 		$f = fopen($tmpFile, 'r+');
 		fwrite($f, '0x4A');
 		fclose($f);
